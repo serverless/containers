@@ -1,0 +1,49 @@
+namespace: fullstack
+
+containers:
+  api-users:
+    compute:
+      src: ./api-users
+      environment:
+        SERVICE_NAME: api-users
+        DEPLOYMENT_VERSION: v1.2
+        USER_TABLE_NAME: ${param:userTable}
+    routing:
+      pathPattern: /api/users*
+    awsIam:
+      customPolicy:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - dynamodb:*
+            Resource:
+              - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${param:userTable}
+  api-posts:
+    compute:
+      src: ./api-posts
+      environment:
+        SERVICE_NAME: api-posts
+        DEPLOYMENT_VERSION: v1.1
+        POSTS_TABLE_NAME: ${param:postsTable}
+    routing:
+      pathPattern: /api/posts*
+    awsIam:
+      customPolicy:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - dynamodb:*
+            Resource:
+              - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${param:postsTable}
+  client-web:
+    compute:
+      src: ./client-web
+      type: awsFargate
+      environment:
+        SERVICE_NAME: client-web
+        DEPLOYMENT_VERSION: v1.1
+    routing:
+      pathPattern: /*
+

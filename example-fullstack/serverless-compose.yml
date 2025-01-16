@@ -3,7 +3,7 @@ services:
   infra:
     path: ./infra
   scf:
-    path: ./scf
+    path: ./services
     params:
       userTable: ${infra.UsersTableName}
       postsTable: ${infra.PostsTableName}
