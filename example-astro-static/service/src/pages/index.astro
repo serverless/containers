@@ -1,0 +1,42 @@
+---
+/**
+* Astro page for Serverless Container Framework.
+*
+* This page renders the main HTML content matching the Express version.
+* It displays environment variables and static resources (images, CSS, etc.).
+*
+* @module IndexPage
+*/
+const env = {
+    namespace: process.env.SERVERLESS_NAMESPACE,
+    containerName: process.env.SERVERLESS_CONTAINER_NAME,
+    stage: process.env.SERVERLESS_STAGE,
+    computeType: process.env.SERVERLESS_COMPUTE_TYPE,
+    local: process.env.SERVERLESS_LOCAL
+};
+---
+
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <title>Serverless Container Framework</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    </head>
+    <body>
+    <div class="container">
+        <img src="/images/logo.png" alt="Logo" class="logo" />
+        <div class="info">Namespace: {env.namespace}</div>
+        <div class="info">Container Name: {env.containerName}</div>
+        <div class="info">Stage: {env.stage}</div>
+        <div class="info">Compute Type: {env.computeType}</div>
+        <div class="info">Local: {env.local}</div>
+    </div>
+    </body>
+</html>

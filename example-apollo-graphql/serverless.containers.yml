@@ -1,0 +1,15 @@
+name: apollo-graphql
+
+deployment:
+  type: awsApi@1.0
+
+containers:
+  service:
+    src: ./service
+    routing:
+      pathPattern: /*
+      pathHealthCheck: /health
+    environment:
+      NODE_ENV: production
+    compute:
+      type: awsLambda # Can be switched to awsFargateEcs

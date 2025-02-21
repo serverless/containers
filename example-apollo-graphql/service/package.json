@@ -1,0 +1,14 @@
+{
+  "name": "example-apollo-graphql",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.10.0",
+    "graphql": "^16.8.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}

@@ -1,0 +1,16 @@
+name: astro-static
+
+deployment:
+  type: awsApi@1.0
+
+containers:
+  service:
+    src: ./service
+    routing:
+      pathPattern: /*
+      pathHealthCheck: /health
+    environment:
+      NODE_ENV: production
+      ASTRO_TELEMETRY_DISABLED: 1 # Disable Astro telemetry
+    compute:
+      type: awsLambda # Can be switched to awsFargateEcs
