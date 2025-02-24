@@ -1,4 +1,4 @@
-# Example AI Streaming Application for Serverless Container Framework
+# Example Streaming AI Chat Interface
 
 [Serverless Container Framework (SCF)](https://serverless.com/containers/docs) is a powerful tool that simplifies the development and deployment of containerized applications on AWS Lambda and/or AWS Fargate ECS.
 
