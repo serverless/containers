@@ -4,6 +4,8 @@
 
 This example demonstrates how to build and deploy an Express-based AI fullstack streaming application that uses Server-Sent Events (SSE) to stream live AI responses from multiple providers (OpenAI and Anthropic). It includes both a front-end and a back-end.The application leverages SCF for local development, flexible compute configurations, and smooth AWS deployments.
 
+**Updated with Claude 3.7 Sonnet Support**
+
 <img width="600" alt="Screenshot 2025-02-04 at 4 56 22 PM" src="https://github.com/
 user-attachments/assets/4b764c68-c35e-4c46-bf14-bcfc0b6fe49a" />
 
