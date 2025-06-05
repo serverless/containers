@@ -1,6 +1,6 @@
 # Mastra Slack AI Agent Example for Serverless Container Framework
 
-📺 **Watch the Tutorial:** [Building AI Agents with Mastra and Serverless Containers](https://www.youtube.com/watch?v=KdVwwEKeF9g)
+📺 **Watch the Tutorial:** [Building AI Agents with Mastra and Serverless Containers](https://youtu.be/7vSVTV-TuIo)
 
 [Serverless Container Framework (SCF)](https://serverless.com/containers/docs) simplifies the development and deployment of containerized applications on AWS Lambda and/or AWS Fargate ECS.
 
